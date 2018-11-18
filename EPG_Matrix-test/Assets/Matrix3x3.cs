@@ -62,7 +62,9 @@ public class Matrix3x3
 
     public static Matrix3x3 Euler(float x, float y, float z)
     {
-        return Rotate(z, AxisId.Forward) * Rotate(x, AxisId.Right) * Rotate(y, AxisId.Up);
+        return Rotate(y, AxisId.Up) 
+            * Rotate(x, AxisId.Right) 
+            * Rotate(z, AxisId.Forward);
     }
 
 
